@@ -1,0 +1,12 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Liniquer Silva",
+      "idade": 15,
+      "turma": "8a",
+      "endereco": "Rua A, 123",
+      "email": "joao@email.com"
+    }
+  ]
+}

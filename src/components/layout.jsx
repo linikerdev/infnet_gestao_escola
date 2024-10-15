@@ -4,7 +4,7 @@ function Layout({ children }) {
     <>
       <div className="container">
         <header>
-          <h1>Cadastro de Alunos</h1>
+          <h1>GESTÃO ESCOLAR</h1>
         </header>
 
         <nav>
