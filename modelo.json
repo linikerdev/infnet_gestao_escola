@@ -1,12 +1,44 @@
 {
   "alunos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Liniquer Silva",
       "idade": 15,
       "turma": "8a",
       "endereco": "Rua A, 123",
       "email": "joao@email.com"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Oliveira",
+      "idade": 14,
+      "turma": "7a",
+      "endereco": "Rua B, 234",
+      "email": "maria@email.com"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Pereira",
+      "idade": 16,
+      "turma": "9a",
+      "endereco": "Rua C, 345",
+      "email": "carlos@email.com"
+    },
+    {
+      "id": "4",
+      "nome": "Ana Souza",
+      "idade": 15,
+      "turma": "8a",
+      "endereco": "Rua D, 456",
+      "email": "ana@email.com"
+    },
+    {
+      "id": "5",
+      "nome": "João Costa",
+      "idade": 17,
+      "turma": "9a",
+      "endereco": "Rua E, 567",
+      "email": "joaoc@email.com"
     }
   ]
 }

@@ -36,6 +36,7 @@ nav a {
 
 main {
   padding: 16px;
+  min-height: 500px;
 }
 
 .btn-cadastrar {
@@ -75,6 +76,17 @@ table td a {
 
 .btn-editar {
   background-color: #ffc107;
+}
+
+.btn {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
 }
 
 .btn-excluir {
