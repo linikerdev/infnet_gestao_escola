@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../assets/styleGlobal.css";
 import { cadastroAlunoApi, editAlunoApi } from "../services/api";
 

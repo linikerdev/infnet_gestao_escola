@@ -1,12 +1,12 @@
-import "./assets/styleGlobal.css";
-import Layout from "./components/layout";
-import Table from "./components/table";
+import "../assets/styleGlobal.css";
+import Layout from "../components/layout";
+import Table from "../components/table";
 import { useEffect, useState } from "react";
-import { deleteAlunosApi, editAlunoApi, getAlunosApi } from "./services/api";
-import Form from "./components/form";
-import Topo from "./components/topo_act";
+import { deleteAlunosApi, getAlunosApi } from "../services/api";
+import Form from "../components/form";
+import Topo from "../components/topo_act";
 
-function App() {
+function Initial() {
   const [alunos, setAlunos] = useState([]);
   const [showList, setShowList] = useState(true);
   const [form, setForm] = useState({});
@@ -46,7 +46,7 @@ function App() {
   }, [showList]);
 
   return (
-    <>
+    <Layout>
       {/* Renderização condicionada (básico) */}
       <Topo show={showList} act={cadastro} />
       {showList ? (
@@ -54,8 +54,8 @@ function App() {
       ) : (
         <Form act={setShowList} form={form} setForm={setForm} update={update} />
       )}
-    </>
+    </Layout>
   );
 }
 
-export default App;
+export default Initial;
