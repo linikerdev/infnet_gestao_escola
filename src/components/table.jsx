@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { columns } from "../config/columns-alunos";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
-
-function Table({ alunos, deleteFn }) {
-  
-
+function Table({ alunos, deleteFn, editForm }) {
   return (
     <table>
       <thead>
@@ -27,16 +25,16 @@ function Table({ alunos, deleteFn }) {
             <td>{item.endereco}</td>
             <td>{item.email}</td>
             <td>
-              <a href="#" className="btn-editar">
-                Editar
-              </a>
+              <button onClick={() => editForm(item)} className="btn btn-editar">
+                <FaEdit />
+              </button>
             </td>
             <td>
               <button
                 onClick={() => deleteFn(item.id)}
                 className="btn btn-excluir"
               >
-                Excluir
+                <FaTrash />
               </button>
             </td>
           </tr>
