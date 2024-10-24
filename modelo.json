@@ -9,76 +9,12 @@
       "email": "joao@email.com"
     },
     {
-      "id": "2",
-      "nome": "Maria Oliveira",
-      "idade": 14,
-      "turma": "7a",
-      "endereco": "Rua B, 234",
-      "email": "maria@email.com"
-    },
-    {
-      "id": "3",
-      "nome": "Carlos Pereira",
-      "idade": 16,
-      "turma": "9a",
-      "endereco": "Rua C, 345",
-      "email": "carlos@email.com"
-    },
-    {
-      "id": "4",
-      "nome": "Ana Souza",
-      "idade": 15,
-      "turma": "8a",
-      "endereco": "Rua D, 456",
-      "email": "ana@email.com"
-    },
-    {
-      "id": "5",
-      "nome": "João Costa",
-      "idade": 17,
-      "turma": "9a",
-      "endereco": "Rua E, 567",
-      "email": "joaoc@email.com"
-    },
-    {
-      "id": "5e9a",
-      "nome": "liniquer",
-      "idade": "10",
-      "turma": "ag5",
-      "endereco": "rio de janeiro",
-      "email": "teste@linijer.com.br"
-    },
-    {
-      "id": "6ecc",
-      "nome": "Luiz",
-      "idade": "41",
-      "turma": "hg3",
-      "endereco": "rio de janeiro",
-      "email": "teste@linijer.com.br"
-    },
-    {
-      "id": "389b",
-      "nome": "geronimo",
-      "idade": "32",
-      "turma": "aaa",
-      "endereco": "curitiba",
-      "email": "teste@geronimo.com"
-    },
-    {
-      "id": "616e",
-      "nome": "Fulano",
-      "idade": "32",
-      "turma": "rr12",
-      "endereco": "belo horizonte",
-      "email": "fulano@tesrte.com"
-    },
-    {
-      "id": "22e8",
-      "nome": "Maria de Jesus",
-      "idade": "19",
-      "turma": "tes2",
-      "endereco": "sao paulo",
-      "email": "maria@terste.com"
+      "id": "f642",
+      "nome": "Melissa OST",
+      "idade": "22",
+      "turma": "pos",
+      "endereco": "são paulo",
+      "email": "melissa@al.infnet.edu.br"
     }
   ]
 }

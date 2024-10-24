@@ -1,29 +1,6 @@
-import { useState } from "react";
 import "../assets/styleGlobal.css";
-import { cadastroAlunoApi, editAlunoApi } from "../services/api";
 
-function Form({ act, form, setForm, update }) {
-  const setChange = (field, value) =>
-    setForm({
-      ...form,
-      [field]: value,
-    });
-
-  const submit = async () => {
-    try {
-      const action = update ? editAlunoApi : cadastroAlunoApi;
-
-      await action(form);
-      alert(
-        `${update ? "Atualização" : "Cadastrado"} do usário ${form.nome} feito com sucesso`,
-      );
-      setForm({});
-      act(true);
-    } catch {
-      throw new Error("não foi possível cadastrar");
-    }
-  };
-
+function Form({ aluno, change, submit }) {
   return (
     <div className="cadastro">
       {/* {JSON.stringify(form)} */}
@@ -31,16 +8,16 @@ function Form({ act, form, setForm, update }) {
         <label>Nome:</label>
         <input
           type="text"
-          value={form.nome || ""}
-          onChange={(e) => setChange("nome", e.target.value)}
+          value={aluno.nome || ""}
+          onChange={(e) => change("nome", e.target.value)}
           placeholder="Digite aqui o Nome"
         />
       </div>
       <div className="field">
         <label>Idade:</label>
         <input
-          value={form.idade || ""}
-          onChange={(e) => setChange("idade", e.target.value)}
+          value={aluno.idade || ""}
+          onChange={(e) => change("idade", e.target.value)}
           type="text"
           placeholder="Digite aqui a Idade"
         />
@@ -48,8 +25,8 @@ function Form({ act, form, setForm, update }) {
       <div className="field">
         <label>Turma:</label>
         <input
-          value={form.turma || ""}
-          onChange={(e) => setChange("turma", e.target.value)}
+          value={aluno.turma || ""}
+          onChange={(e) => change("turma", e.target.value)}
           type="text"
           placeholder="Digite aqui a Turma"
         />
@@ -57,8 +34,8 @@ function Form({ act, form, setForm, update }) {
       <div className="field">
         <label>Endereço:</label>
         <input
-          value={form.endereco || ""}
-          onChange={(e) => setChange("endereco", e.target.value)}
+          value={aluno.endereco || ""}
+          onChange={(e) => change("endereco", e.target.value)}
           type="text"
           placeholder="Digite aqui o Endereço"
         />
@@ -66,8 +43,8 @@ function Form({ act, form, setForm, update }) {
       <div className="field">
         <label>Email:</label>
         <input
-          value={form.email || ""}
-          onChange={(e) => setChange("email", e.target.value)}
+          value={aluno.email || ""}
+          onChange={(e) => change("email", e.target.value)}
           type="email"
           placeholder="Digite aqui o Email"
         />

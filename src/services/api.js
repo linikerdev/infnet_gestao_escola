@@ -31,3 +31,12 @@ export async function editAlunoApi(form) {
     throw new Error("não foi possível atualizar");
   }
 }
+
+export async function detalhesAlunoApi(id) {
+  // poderiam usar o axios
+  try {
+    return await http.get(`/alunos/${id}`);
+  } catch {
+    throw new Error("não foi possível atualizar");
+  }
+}

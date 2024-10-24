@@ -150,6 +150,15 @@ footer {
     background-color: #c1121f;
 }
 
+.menu a.active {
+    background: #054f77;
+    color: #fff;
+    font-weight: bold;
+}
 .topo span {
     margin: 1px 3px;
+}
+
+.error {
+    text-align: center;
 }

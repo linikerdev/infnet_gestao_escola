@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 
+import { useNavigate } from "react-router-dom";
 import { columns } from "../config/columns-alunos";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 function Table({ alunos, deleteFn, editForm }) {
+  const navigate = useNavigate();
   return (
     <table>
       <thead>
@@ -25,7 +27,10 @@ function Table({ alunos, deleteFn, editForm }) {
             <td>{item.endereco}</td>
             <td>{item.email}</td>
             <td>
-              <button onClick={() => editForm(item)} className="btn btn-editar">
+              <button
+                onClick={() => navigate(`/detalhes/${item.id}`)}
+                className="btn btn-editar"
+              >
                 <FaEdit />
               </button>
             </td>
