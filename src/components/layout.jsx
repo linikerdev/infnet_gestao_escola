@@ -1,5 +1,4 @@
 import Header from "./header";
-import Menu from "./menu";
 import Footer from "./footer";
 import Container from "./container";
 
@@ -9,8 +8,7 @@ function Layout({ children }) {
     <>
       <Container>
         <Header />
-        <Menu />
-        <main>{children}</main>
+        <main className="container min-h-screen mx-auto">{children}</main>
         <Footer />
       </Container>
     </>

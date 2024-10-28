@@ -4,48 +4,57 @@ import { useNavigate } from "react-router-dom";
 import { columns } from "../config/columns-alunos";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
-function Table({ alunos, deleteFn, editForm }) {
+function Table({ alunos, deleteFn }) {
+
   const navigate = useNavigate();
+
   return (
-    <table>
-      <thead>
-        <tr>
-          {columns.alunos.map((column, i) => (
-            <th key={i}>{column.toUpperCase()}</th>
-          ))}
-          <th>Editar</th>
-          <th>Excluir</th>
-        </tr>
-      </thead>
-      <tbody>
-        {alunos.map((item, i) => (
-          <tr key={i}>
-            <td>{item.id}</td>
-            <td>{item.nome}</td>
-            <td>{item.idade}</td>
-            <td>{item.turma}</td>
-            <td>{item.endereco}</td>
-            <td>{item.email}</td>
-            <td>
-              <button
-                onClick={() => navigate(`/detalhes/${item.id}`)}
-                className="btn btn-editar"
-              >
-                <FaEdit />
-              </button>
-            </td>
-            <td>
-              <button
-                onClick={() => deleteFn(item.id)}
-                className="btn btn-excluir"
-              >
-                <FaTrash />
-              </button>
-            </td>
+    <div className="relative overflow-x-auto mt-10">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr className="text-center">
+            {columns.alunos.map((column, i) => (
+              <th key={i} scope="col" className="px-2 py-3">
+                {column}
+              </th>
+            ))}
+            <th className="px-1 py-3">Editar</th>
+            <th className="px-1 py-3">Excluir</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {alunos.map((item, i) => (
+            <tr
+              key={i}
+              className="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700"
+            >
+              <td className="px-2 py-4">{item.id}</td>
+              <td className="px-2 py-4">{item.nome}</td>
+              <td className="px-2 py-4">{item.idade}</td>
+              <td className="px-2 py-4">{item.turma}</td>
+              <td className="px-2 py-4">{item.endereco}</td>
+              <td className="px-2 py-4">{item.email}</td>
+              <td className=" py-4 text-center justify-center">
+                <button
+                  onClick={() => navigate(`/detalhes/${item.id}`)}
+                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  <FaEdit />
+                </button>
+              </td>
+              <td className="flex py-4 text-center justify-center">
+                <button
+                  onClick={() => null}
+                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                >
+                  <FaTrash />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

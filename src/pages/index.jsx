@@ -1,10 +1,8 @@
-import "../assets/styleGlobal.css";
-import Layout from "../components/layout";
 import Table from "../components/table";
 import { useEffect, useState } from "react";
 import { deleteAlunosApi, getAlunosApi } from "../services/api";
 import Form from "../components/form";
-import Topo from "../components/topo_act";
+
 
 function Initial() {
   const [alunos, setAlunos] = useState([]);
