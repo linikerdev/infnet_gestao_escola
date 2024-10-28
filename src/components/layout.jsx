@@ -9,8 +9,7 @@ function Layout({ children }) {
     <>
       <Container>
         <Header />
-        <Menu />
-        <main>{children}</main>
+        <main className="container mx-auto">{children}</main>
         <Footer />
       </Container>
     </>

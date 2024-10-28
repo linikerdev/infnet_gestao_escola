@@ -1,20 +1,20 @@
 {
   "alunos": [
     {
-      "id": "1",
-      "nome": "Liniquer Silva",
-      "idade": 15,
-      "turma": "8a",
-      "endereco": "Rua A, 123",
-      "email": "joao@email.com"
+      "id": "87b6",
+      "nome": "teste 22",
+      "idade": "12",
+      "turma": "22",
+      "endereco": "Estrada do pinhão 176 2",
+      "email": "contato@liniker.com.br"
     },
     {
-      "id": "f642",
-      "nome": "Melissa OST",
-      "idade": "22",
-      "turma": "pos",
-      "endereco": "são paulo",
-      "email": "melissa@al.infnet.edu.br"
+      "id": "762e",
+      "nome": "Liniker Silva",
+      "idade": "20",
+      "turma": "ddw21",
+      "email": "liniker@teste.com.br",
+      "endereco": "Estrad da serra"
     }
   ]
 }
