@@ -1,12 +1,17 @@
-/* eslint-disable react/prop-types */
+ 
 
 import { useNavigate } from "react-router-dom";
 import { columns } from "../config/columns-alunos";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAluno } from "../store/slices/aluno/actions";
 
-function Table({ alunos, deleteFn }) {
-
+function Table() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { alunos } = useSelector((state) => state.aluno);
+
+  const removeAluno = (id) => dispatch(deleteAluno(id));
 
   return (
     <div className="relative overflow-x-auto mt-10">
@@ -44,7 +49,7 @@ function Table({ alunos, deleteFn }) {
               </td>
               <td className="flex py-4 text-center justify-center">
                 <button
-                  onClick={() => null}
+                  onClick={() => removeAluno(item.id)}
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   <FaTrash />
