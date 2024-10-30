@@ -1,5 +1,3 @@
- 
-
 import { useNavigate } from "react-router-dom";
 import { columns } from "../config/columns-alunos";
 import { FaEdit, FaTrash } from "react-icons/fa";
@@ -11,7 +9,7 @@ function Table() {
   const navigate = useNavigate();
   const { alunos } = useSelector((state) => state.aluno);
 
-  const removeAluno = (id) => dispatch(deleteAluno(id));
+  const removeAluno = (aluno) => dispatch(deleteAluno(aluno));
 
   return (
     <div className="relative overflow-x-auto mt-10">
@@ -49,7 +47,7 @@ function Table() {
               </td>
               <td className="flex py-4 text-center justify-center">
                 <button
-                  onClick={() => removeAluno(item.id)}
+                  onClick={() => removeAluno(item)}
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   <FaTrash />

@@ -18,9 +18,6 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { 
-  setAlunos, 
-  setDetalhes
- } = counterSlice.actions;
+export const { setAlunos, setDetalhes } = counterSlice.actions;
 
 export default counterSlice.reducer;

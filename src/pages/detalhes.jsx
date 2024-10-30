@@ -12,7 +12,7 @@ function Detalhes() {
 
   useEffect(() => {
     dispatch(getDetalhesAluno(id));
-  }, [id]);
+  }, [dispatch, id]);
 
   if (!aluno) {
     return <ErrorAluno />;

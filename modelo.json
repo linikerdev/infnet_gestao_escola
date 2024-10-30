@@ -1,20 +1,20 @@
 {
   "alunos": [
     {
-      "id": "1",
-      "nome": "Liniquer Silva professor 2",
-      "idade": 15,
-      "turma": "8a",
-      "endereco": "Rua A, 123",
-      "email": "joao@email.com"
-    },
-    {
       "id": "f642",
       "nome": "Melissa OST",
       "idade": "22",
       "turma": "pos",
       "endereco": "são paulo",
       "email": "melissa@al.infnet.edu.br"
+    },
+    {
+      "id": "1",
+      "nome": "Liniquer Silva 2",
+      "idade": 15,
+      "turma": "8a",
+      "endereco": "Rua A, 1233",
+      "email": "joao@email.com"
     }
   ]
 }

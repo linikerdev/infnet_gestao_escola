@@ -9,10 +9,13 @@ function Form({ isEdit }) {
 
   const changeField = (field, value) => dispatch(editForm(field, value));
 
+  // if (!isEdit) {
+  //   dispatch(setDetalhes({}));
+  // }
+
   const submitForm = () => {
     try {
       dispatch(saveForm(isEdit));
-      alert(`Atualizado o aluno ${aluno?.nome} feito com sucesso`);
       navigate("/");
     } catch {
       alert("deu ruim");
