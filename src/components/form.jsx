@@ -9,15 +9,7 @@ function Form({ isEdit }) {
 
   const changeField = (field, value) => dispatch(editForm(field, value));
 
-  const submitForm = () => {
-    try {
-      dispatch(saveForm(isEdit));
-      alert(`Atualizado o aluno ${aluno?.nome} feito com sucesso`);
-      navigate("/");
-    } catch {
-      alert("deu ruim");
-    }
-  };
+  const submitForm = () => dispatch(saveForm(isEdit)).then(() => navigate("/"));
 
   return (
     <div className="cadastro mt-10">

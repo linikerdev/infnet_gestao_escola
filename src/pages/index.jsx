@@ -1,7 +1,5 @@
 import Table from "../components/table";
-import { useEffect, useState } from "react";
-import { deleteAlunosApi, getAlunosApi } from "../services/api";
-import Form from "../components/form";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAllAlunos } from "../store/slices/aluno/actions";
 

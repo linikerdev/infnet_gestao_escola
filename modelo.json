@@ -2,19 +2,11 @@
   "alunos": [
     {
       "id": "1",
-      "nome": "Liniquer Silva professor 2",
-      "idade": 15,
+      "nome": "Liniquer Araujo Silva 2",
+      "idade": "35",
       "turma": "8a",
-      "endereco": "Rua A, 123",
+      "endereco": "Rua da Serra.",
       "email": "joao@email.com"
-    },
-    {
-      "id": "f642",
-      "nome": "Melissa OST",
-      "idade": "22",
-      "turma": "pos",
-      "endereco": "são paulo",
-      "email": "melissa@al.infnet.edu.br"
     }
   ]
 }

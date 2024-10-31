@@ -10,24 +10,17 @@ import { store } from "./store";
 function Routers() {
   return (
     <Provider store={store}>
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" Component={Initial} />
-          <Route path="/cadastro" Component={Cadastro} />
-          <Route path="/detalhes/:id?" Component={Detalhes} />
-          <Route path="/teste" Component={Teste} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" Component={Initial} />
+            <Route path="/cadastro" Component={Cadastro} />
+            <Route path="/detalhes/:id?" Component={Detalhes} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </Provider>
   );
 }
 
 export default Routers;
-
-// componente fake react
-//
-const Teste = () => {
-  return <div> Aqui é um teste</div>;
-};

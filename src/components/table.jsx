@@ -1,5 +1,3 @@
- 
-
 import { useNavigate } from "react-router-dom";
 import { columns } from "../config/columns-alunos";
 import { FaEdit, FaTrash } from "react-icons/fa";
@@ -9,9 +7,9 @@ import { deleteAluno } from "../store/slices/aluno/actions";
 function Table() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { alunos } = useSelector((state) => state.aluno);
+  const { alunos, loading } = useSelector((state) => state.aluno);
 
-  const removeAluno = (id) => dispatch(deleteAluno(id));
+  const removeAluno = (aluno) => dispatch(deleteAluno(aluno));
 
   return (
     <div className="relative overflow-x-auto mt-10">
@@ -28,35 +26,38 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {alunos.map((item, i) => (
-            <tr
-              key={i}
-              className="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700"
-            >
-              <td className="px-2 py-4">{item.id}</td>
-              <td className="px-2 py-4">{item.nome}</td>
-              <td className="px-2 py-4">{item.idade}</td>
-              <td className="px-2 py-4">{item.turma}</td>
-              <td className="px-2 py-4">{item.endereco}</td>
-              <td className="px-2 py-4">{item.email}</td>
-              <td className=" py-4 text-center justify-center">
-                <button
-                  onClick={() => navigate(`/detalhes/${item.id}`)}
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  <FaEdit />
-                </button>
-              </td>
-              <td className="flex py-4 text-center justify-center">
-                <button
-                  onClick={() => removeAluno(item.id)}
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  <FaTrash />
-                </button>
-              </td>
-            </tr>
-          ))}
+          {loading && <div>Carregando...</div>}
+
+          {!loading &&
+            alunos?.map((item, i) => (
+              <tr
+                key={i}
+                className="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700"
+              >
+                <td className="px-2 py-4">{item.id}</td>
+                <td className="px-2 py-4">{item.nome}</td>
+                <td className="px-2 py-4">{item.idade}</td>
+                <td className="px-2 py-4">{item.turma}</td>
+                <td className="px-2 py-4">{item.endereco}</td>
+                <td className="px-2 py-4">{item.email}</td>
+                <td className=" py-4 text-center justify-center">
+                  <button
+                    onClick={() => navigate(`/detalhes/${item.id}`)}
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    <FaEdit />
+                  </button>
+                </td>
+                <td className="flex py-4 text-center justify-center">
+                  <button
+                    onClick={() => removeAluno(item)}
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    <FaTrash />
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
